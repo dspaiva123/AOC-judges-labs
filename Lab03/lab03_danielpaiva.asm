@@ -58,7 +58,7 @@ main:
 
         move $s0, $zero #definindo $s0 como armazenador da pos atual da string e tambem sera do tamanho
         
-    ################ INICIO DO LACO #######################
+    ################ INICIO DO LACO CRIPTOGRAFIA #######################
     loopCriptografia:
 		lb  $t0, msg($s0) #armazenando o char da pos atual da string para ser avaliado
 		beq $t0, 10, fimCriptografia #10 = \n
@@ -193,7 +193,7 @@ main:
 			li $t1, 80
 			j substituir
     
-    ################ FIM DO LACO #######################
+    ################ FIM DO LACO CRIPTOGRAFIA #######################
     fimCriptografia:
     	#imprimindo: "Numero total de caracteres: "
         li $v0, 4 #carregando instrucao para impressao de string
